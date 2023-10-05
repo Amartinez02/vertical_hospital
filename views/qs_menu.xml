@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="vertical_hospital_menu_root" name="Vertical de Hospitales" sequence="1" web_icon="vertical_hospital,static/description/icon.png" />
+        <menuitem id="qs_patients_menu" name="Pacientes" parent="vertical_hospital_menu_root" action="qs_patients_action" sequence="100" />
+        <menuitem id="qs_treatments_menu" name="Tratamientos" parent="vertical_hospital_menu_root" action="qs_treatments_action" sequence="200" />
+            
+</odoo>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record model="ir.config_parameter" id="vertical_hospital_api_rest" forcecreate="False">
+        <field name="key">vertical.hospital.api.rest</field>
+        <field name="value">pacientes/consulta/</field>
+    </record>   
+</odoo>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_qs_patients" model="ir.actions.report">
+        <field name="name">Panciente</field>
+        <field name="model">qs.patients</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">vertical_hospital.qs_patients</field>
+        <field name="report_file">vertical_hospital.qs_patients</field>
+
+        <field name="print_report_name">'%s' % (object.name)</field>
+        <field name="binding_model_id" ref="model_qs_patients" />
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="qs_patients">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="o">
+                    <div style="padding: 10px 5px;">
+
+                        <h2>Datos del paciente</h2>
+
+                        <table class="table table-bordered" style="table-layout: fixed">
+                            <thead style="display: table-row-group">
+                                <tr>
+                                    <th style="width: 15%" scope="col">Secuencia</th>
+                                    <th style="width: 45%" scope="col">Nombre y apellido</th>
+                                    <th style="width: 20%" scope="col">DNI</th>
+                                    <th style="width: 20%" scope="col">Estatus</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> <span style="font-size: 17px; font-weight: 600;" t-field="o.name" /></td>
+                                    <td> <span style="font-size: 17px; font-weight: 600;" t-field="o.full_name" /></td>
+                                    <td> <span style="font-size: 17px; font-weight: 600;" t-field="o.dni" /></td>
+                                    <td> <span style="font-size: 17px; font-weight: 600;" t-field="o.state" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

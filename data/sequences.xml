@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="qs_patients_sequence" model="ir.sequence">
+        <field name="name">Patients sequence</field>
+        <field name="code">qs.patients.sequence</field>
+        <field name="prefix">PA</field>
+        <field eval="1" name="number_next"/>
+        <field eval="1" name="number_increment"/>
+        <field name="padding">6</field>
+    </record>    
+</odoo>

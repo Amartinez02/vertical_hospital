@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+qs_patients,qs.patients,model_qs_patients,group_vertical_hospital,1,1,1,1
+qs_treatments,qs.treatments,model_qs_treatments,group_vertical_hospital,1,1,1,1
+
+
